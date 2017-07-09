@@ -1,0 +1,41 @@
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+ // display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar {
+  line-height: 5.4;
+}
+.banner h1 {
+  font-size: 63px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.6);
+  margin: 0px;
+  padding-top: 189px;
+  color: white;
+  font-weight: bold;
+}
+.banner h2 {
+  color: #000000;
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 50px;
+}
+.search-bar {
+  text-align: center;
+}
+#dateRange {
+  width: 212px;
+}
+.banner-artwork{
+  height: 500px;
+}
+
+

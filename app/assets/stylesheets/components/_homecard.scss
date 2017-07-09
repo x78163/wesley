@@ -1,0 +1,39 @@
+.homecard {
+  height: 180px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+.homecard img {
+  height: 100%;
+  width: 100%;
+}
+
+.homecard-title {
+  position: absolute;
+  font-weight: bold;
+  padding: 11px;
+}
+
+.whole-cards {
+  margin-top: 12px;
+  margin-bottom: 38px;
+}
+.browse {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+
+.browse a {
+  color: #333333;
+  text-decoration: none;
+}
+
