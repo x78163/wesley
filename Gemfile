@@ -1,12 +1,35 @@
 source 'https://rubygems.org'
 ruby '2.3.4'
 
-gem 'figaro'
+gem 'rails', '5.0.3'
+
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
 gem 'puma'
-gem 'rails', '5.0.4'
 gem 'redis'
+gem 'devise'
+gem 'figaro'
+gem 'cloudinary'
+gem 'faker'
+gem 'omniauth-facebook'
+gem 'mailboxer'
+#gem 'chosen-rails'
+
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
+
+gem 'geocoder'
+gem "gmaps4rails"
+
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
@@ -17,11 +40,10 @@ gem 'simple_form'
 gem 'uglifier'
 
 group :development, :test do
+  gem 'meta_request'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'listen', '~> 3.0.5'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
 end
