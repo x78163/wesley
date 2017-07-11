@@ -1,0 +1,48 @@
+
+<% @sermon.each do |sermon| %>
+
+<%= link_to "View", sermon_path(sermon) %>
+<%=sermon.title  %>
+<br>
+<%=sermon.speaker  %>
+<br>
+<%=sermon.description  %>
+<br>
+<%=sermon.audio.path  %>
+<br>
+<br>
+
+<%= link_to "Delete", sermon_path(sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-book-show" %>
+
+<% end %>
+
+<br>
+<%= link_to "new", new_sermon_path %>
+<div class="photo-gallery">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Lightbox Gallery</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+        </div>
+        <div class="row photos">
+            <div class="col-lg-3 col-md-4 col-sm-6 item">
+                <a href="desk.jpg" data-lightbox="photos"><img class="img-responsive" src="desk.jpg" /></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 item">
+                <a href="building.jpg" data-lightbox="photos"><img class="img-responsive" src="building.jpg" /></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 item">
+                <a href="loft.jpg" data-lightbox="photos"><img class="img-responsive" src="loft.jpg" /></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 item">
+                <a href="building.jpg" data-lightbox="photos"><img class="img-responsive" src="building.jpg" /></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 item">
+                <a href="loft.jpg" data-lightbox="photos"><img class="img-responsive" src="loft.jpg" /></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 item">
+                <a href="desk.jpg" data-lightbox="photos"><img class="img-responsive" src="desk.jpg" /></a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+
+<%= simple_form_for @sermon do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :speaker %>
+  <%= f.input :speakdate %>
+  <%= f.input :audio, as: :attachinary %>
+  <div class="text-center">
+  <br>
+  <%= f.button :submit, class: "btn btn-primary" %>
+  <br>
+  </div>
+<% end %>

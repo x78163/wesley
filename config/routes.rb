@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+ resources :sermons
+
   mount Attachinary::Engine => "/attachinary"
   root to: 'pages#home'
 
