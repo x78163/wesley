@@ -1,46 +1,116 @@
 
-
-
-
-<div>
-<div class="banner" style="background: linear-gradient(-30deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 4%), url('http://trustedphotopa.com/wp-content/uploads/2012/10/2012-10-20-Wesley-Church-IMG_7720.jpg');">
-  <h1 class="text-center">Wesley United Methodist Church <br> (Kansas City)</h1>
-
-   <br>
-  <br>
-   <br>
-  <br>
-  <p class="text-center">Please Join Us For Worship At:</p>
-  <br>
-   <br>
-   635 N 32nd St, <br>Kansas City, KS 66102, USA
-    <br>
-
-     <br>
-
-
-
-
-  <br>
-</div>
-<div class="margin">
+    <div>
+        <div>
+            <label class="debug">
+                <input type="checkbox" />Debug</label>
+        </div>
+        <div class="parallax">
+            <div id="group1" class="parallax-group" style="width:100%;background-image:url(<%= image_tag "wesleymc_logo_png.png"%>);background-image:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),;background-size:cover;">
+                <div class="parallax-layer scroll-level-base" style="background-image:url(<%= image_tag "wesleymc_logo_png.png"%>);background-repeat:no-repeat;background-size:cover;align-items:center;">
+                    <div class="title">
+                        <p class="text-center">Welcome to Wesley Methodist Church</p>
+                    </div>
+                </div>
+            </div>
+            <div id="group2" class="parallax-group">
+                <div class="parallax-layer scroll-level-base">
+                    <div class="title">
+                        <p><div class="margin">
 <div id="map" style=" width: 100%;height: 300px;"></div>
+</div></p>
+                    </div><%= image_tag "dove-png-41759.png", style: "width:100%" %></div>
+                <div class="parallax-layer scroll-level-back" style="background-image:url(&quot;kansas-sunflower-fields-alex-zabo.jpg&quot;);width:100%;background-size:cover;background-repeat:no-repeat;">
+                    <div class="title">
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+            <div id="group3" class="parallax-group">
+                <div class="parallax-layer scroll-level-fore">
+                    <div class="title">
+                        <p class="text-left" style="align-items:flex-start;text-align:center;"><img src="bible_PNG36.png" style="width:150%;vertical-align:middle;padding-right:40%;" />About our Congregation</p>
+                    </div>
+                </div>
+                <div class="parallax-layer scroll-level-base" style="background-color:rgb(251,254,248);background-image:url(&quot;5.jpg&quot;);background-repeat:no-repeat;background-size:cover;width:100%;">
+                    <div class="title">
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+            <div id="group4" class="parallax-group">
+                <div class="parallax-layer scroll-level-base">
+                    <div class="title">
+                        <p>Base layer</p>
+                    </div>
+                </div>
+                <div class="parallax-layer scroll-level-back">
+                    <div class="title">
+                        <p>Background layer</p>
+                    </div>
+                </div>
+                <div class="parallax-layer scroll-level-deep">
+                    <div class="title">
+                        <p>Deep Background layer</p>
+                    </div>
+                </div>
+            </div>
+            <div id="group5" class="parallax-group">
+                <div class="parallax-layer scroll-level-fore">
+                    <div class="title">
+                        <p>Foreground layer</p>
+                    </div>
+                </div>
+                <div class="parallax-layer scroll-level-base">
+                    <div class="title">
+                        <p>Base layer</p>
+                    </div>
+                </div>
+            </div>
+            <div id="group6" class="parallax-group">
+                <div class="parallax-layer scroll-level-base">
+                    <div class="title">
+                        <p>Base layer</p>
+                    </div>
+                </div>
+                <div class="parallax-layer scroll-level-back">
+                    <div class="title">
+                        <p>Background layer</p>
+                    </div>
+                </div>
+            </div>
+            <div id="group7" class="parallax-group">
+                <div class="parallax-layer scroll-level-base">
+                    <div class="title">
+                        <p>Base layer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 ">
+        <ul class="list-inline response-fa">
+          <li><a href=""><i class="fa fa-facebook"></i></a></li>
+
+          <li><a href=""><i class="fa fa-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-xs-8 text-right response">
+        <p>Managed by Wesley United Methodist Church</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 ############cloudinary display audio and waveform########
 
 <%=cl_image_tag("sample_uomzwr.png", :height=>250, :width=>400, :flags=>"waveform", :start_offset=>"2", :end_offset=>"4", :color=>"blue", :background=>"transparent", :resource_type=>"video") %>
 
-<% audio = cloudinary_url("sample_uomzwr.mp3", :resource_type=>"video") %>
 
-
-<video controls="" autoplay=0 name="media"><source src=<%= audio %> type="audio/mpeg"></video>
-</div>
-
-
-
-
-  <script type="text/javascript">
+<script type="text/javascript">
     var myLatlng = new google.maps.LatLng(39.112636,-94.6651399);
 
     var myOptions = {
@@ -64,20 +134,3 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-    <div id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 ">
-        <ul class="list-inline response-fa">
-          <li><a href=""><i class="fa fa-facebook"></i></a></li>
-
-          <li><a href=""><i class="fa fa-twitter"></i></a></li>
-        </ul>
-      </div>
-      <div class="col-xs-8 text-right response">
-        <p>Managed by Wesley United Methodist Church</p>
-      </div>
-    </div>
-  </div>
-</div>
