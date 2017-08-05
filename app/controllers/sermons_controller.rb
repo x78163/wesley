@@ -43,6 +43,6 @@ def destroy
 end
 
 def sermon_params
-  params.require(:sermon).permit(:title, :speaker, :speakdate, :description, :audio)
+  params.require(:sermon).permit(:title, :speaker, :speakdate, :description, :audio, :photo)
 end
 end

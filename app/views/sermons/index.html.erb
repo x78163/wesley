@@ -1,48 +1,28 @@
 
 <% @sermon.each do |sermon| %>
 
-<%= link_to "View", sermon_path(sermon) %>
-<%=sermon.title  %>
-<br>
-<%=sermon.speaker  %>
-<br>
-<%=sermon.description  %>
-<br>
-<%=sermon.audio.path  %>
-<br>
-<br>
+ <div class="col-sm-3">
+                <article class="col-item">
+                    <div class="photo">
+                        <div class="options-cart-round">
+                            <button class="btn btn-default" title="Listen to Sermon"><%= link_to "v", sermon_path(sermon) %>
+</span></button>
+                        </div>
+                        <a href="#"><img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /></a>
+                    </div>
+                    <div class="info">
+                        <div class="row">
+                            <div class="price-details col-md-6">
+                                <p class="details">Presented By: <%=sermon.speaker  %></p>
+                                <h1><%=sermon.title  %></h1><span class="price-new"><%=sermon.speakdate  %></span></div>
+                        </div>
+                        <%= link_to "Delete", sermon_path(sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "fa fa-trash" %>
+                    </div>
+                </article>
 
-<%= link_to "Delete", sermon_path(sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-book-show" %>
-
+            </div>
 <% end %>
-
+<br><br>
 <br>
 <%= link_to "new", new_sermon_path %>
-<div class="photo-gallery">
-    <div class="container">
-        <div class="intro">
-            <h2 class="text-center">Lightbox Gallery</h2>
-            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
-        </div>
-        <div class="row photos">
-            <div class="col-lg-3 col-md-4 col-sm-6 item">
-                <a href="desk.jpg" data-lightbox="photos"><img class="img-responsive" src="desk.jpg" /></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 item">
-                <a href="building.jpg" data-lightbox="photos"><img class="img-responsive" src="building.jpg" /></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 item">
-                <a href="loft.jpg" data-lightbox="photos"><img class="img-responsive" src="loft.jpg" /></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 item">
-                <a href="building.jpg" data-lightbox="photos"><img class="img-responsive" src="building.jpg" /></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 item">
-                <a href="loft.jpg" data-lightbox="photos"><img class="img-responsive" src="loft.jpg" /></a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 item">
-                <a href="desk.jpg" data-lightbox="photos"><img class="img-responsive" src="desk.jpg" /></a>
-            </div>
-        </div>
-    </div>
-</div>
+

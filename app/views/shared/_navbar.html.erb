@@ -4,16 +4,19 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <!-- Text link -->
-    <a href="https://www.lewagon.com" class="navbar-wagon-item navbar-wagon-link">Our Ministry</a>
+    <a href="https://www.lewagon.com" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Ministry", sermons_path%></a>
 
     <!-- Text link -->
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Bulletins</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Sermons", sermons_path%></a>
 
     <!-- Text link -->
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Prayer Requests</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Prayers", sermons_path%></a>
    <!-- Text link -->
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Upcoming Events</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Calendar", sermons_path%></a>
+    <!-- Text link -->
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Newsletter", sermons_path%></a>
     <!-- Notification link-->
+    <%= link_to "Inbox", mailbox_inbox_path %>
     <a href="" class="navbar-wagon-item navbar-wagon-link">
       <div class="badge-container">
         <i class="fa fa-envelope-o"></i>
@@ -24,19 +27,26 @@
     <!-- Profile picture and dropdown -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-
+ <% avatar_url =  "http://placehold.it/30x30" %>
+        <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li><a href="#">Our Ministry</a></li>
           <li><a href="#">Bulletins</a></li>
           <li><a href="#">Prayer Requests</a></li>
           <li><a href="#">Upcoming Events</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, style: "text-decoration: none; font-size:14px; color: #9F9F9F;" %></li>
         </ul>
       </div>
     </div>
 
     <!-- Button (call-to-action) -->
-    <a href="" class="navbar-wagon-item navbar-wagon-button btn">Join Us</a>
+    <% if user_signed_in? %>
+        <li><%= link_to "Hello, #{current_user.first}", "#" %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+        <li class="active"><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+    <% end %>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
@@ -44,11 +54,16 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-         <li><a href="#">Our Ministry</a></li>
-          <li><a href="#">Bulletins</a></li>
-          <li><a href="#">Prayer Requests</a></li>
-          <li><a href="#">Upcoming Events</a></li>
-        <li><a href="#">Log Out</a></li>
+        <li><%= link_to "Sermons", sermons_path, style: "text-decoration: none; font-size:14px;; margin: 10px; color: #9F9F9F;" %></li>
+        <li><%= link_to "Sermons", sermons_path, style: "text-decoration: none; font-size:14px; margin: 10px; color: #9F9F9F;" %></li>
+        <% if user_signed_in? %>
+        <!-- add in the messages section -->
+        <li><%= link_to "Profile", sermons_path(current_user.id), style: "text-decoration: none; font-size:14px; margin:10px;"%></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, style: "text-decoration: none; font-size:14px; ; margin: 10px; color: #9F9F9F;" %></li>
+        <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path, style: "text-decoration: none; font-size:14px; margin: 10px; color: #9F9F9F;" %></li>
+        <li><%= link_to "Login", new_user_session_path, style: "text-decoration: none; font-size:14px; margin: 10px; color: #9F9F9F;" %></li>
+        <% end %>
       </ul>
     </div>
   </div>
