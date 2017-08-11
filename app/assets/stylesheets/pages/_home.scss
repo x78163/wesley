@@ -28,7 +28,7 @@
 .parent {
   width:100%;
   height:100vh;
-  overflow:hidden;
+  overflow:scroll;
   /*overflow-x:scroll;*/
   overflow-x:hidden;
   white-space:nowrap;
@@ -47,7 +47,7 @@
 .h1, h1 {
   float:right;
   color:white;
-  font-size:65px;
+  font-size:100vw;
   padding:10px;
 }
 
@@ -258,7 +258,7 @@ p {
 }
 
 body, html {
-  overflow:hidden;
+  overflow:scroll;
 }
 
 body {
@@ -269,163 +269,4 @@ body {
   margin:0;
   padding:0;
 }
-
-.parallax {
-  font-size:200%;
-}
-
-.title {
-  text-align:center;
-  position:absolute;
-  left:50%;
-  top:50%;
-  -webkit-transform:translate(-50%, -50%);
-  transform:translate(-50%, -50%);
-}
-
-#group1 {
-  z-index:5;
-}
-
-#group1 .scroll-level-base {
-  background:rgb(102,204,102);
-}
-
-#group2 {
-  z-index:3;
-}
-
-#group2 .scroll-level-back {
-}
-
-#group3 {
-  z-index:4;
-}
-
-#group3 .scroll-level-base {
-  background:rgb(153,216,101);
-}
-
-#group4 {
-  z-index:2;
-}
-
-#group4 .scroll-level-deep {
-  background:rgb(184,223,101);
-}
-
-#group5 {
-  z-index:3;
-}
-
-#group5 .scroll-level-base {
-  background:rgb(214,229,100);
-}
-
-#group6 {
-  z-index:2;
-}
-
-#group6 .scroll-level-back {
-  background:rgb(245,235,100);
-}
-
-#group7 {
-  z-index:3;
-}
-
-#group7 .scroll-level-base {
-  background:rgb(255,241,100);
-}
-
-.team-boxed {
-  color:#313437;
-  background-color:#eef4f7;
-}
-
-.team-boxed p {
-  color:#7d8285;
-}
-
-.team-boxed h2 {
-  font-weight:bold;
-  margin-bottom:40px;
-  padding-top:40px;
-  color:inherit;
-}
-
-@media (max-width:767px) {
-  .team-boxed h2 {
-    margin-bottom:25px;
-    padding-top:25px;
-    font-size:24px;
-  }
-}
-
-.team-boxed .intro {
-  font-size:16px;
-  max-width:500px;
-  margin:0 auto;
-}
-
-.team-boxed .intro p {
-  margin-bottom:0;
-}
-
-.team-boxed .people {
-  padding:50px 0;
-}
-
-.team-boxed .item {
-  text-align:center;
-}
-
-.team-boxed .item .box {
-  text-align:center;
-  padding:30px;
-  background-color:#fff;
-  margin-bottom:30px;
-}
-
-.team-boxed .item .name {
-  font-weight:bold;
-  margin-top:28px;
-  margin-bottom:8px;
-  color:inherit;
-}
-
-.team-boxed .item .title {
-  text-transform:uppercase;
-  font-weight:bold;
-  color:#d0d0d0;
-  letter-spacing:2px;
-  font-size:13px;
-}
-
-.team-boxed .item .description {
-  font-size:15px;
-  margin-top:15px;
-  margin-bottom:20px;
-}
-
-.team-boxed .item img {
-  max-width:160px;
-}
-
-.team-boxed .social {
-  font-size:18px;
-  color:#a2a8ae;
-}
-
-.team-boxed .social a {
-  color:inherit;
-  margin:0 10px;
-  display:inline-block;
-  opacity:0.7;
-}
-
-.team-boxed .social a:hover {
-  opacity:1;
-}
-
 

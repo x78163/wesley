@@ -3,4 +3,18 @@ class PagesController < ApplicationController
   def home
 
   end
+
+  def history
+
+  end
+
+  def team
+
+  end
+
+  def indexhome
+  end
+
+  def construction
+  end
 end

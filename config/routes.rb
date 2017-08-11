@@ -17,5 +17,9 @@ Rails.application.routes.draw do
       post :untrash
     end
   end
+  get '/history' => 'pages#history'
+   get '/team' => 'pages#team'
+   get '/indexhome' => 'pages#indexhome'
+   get '/construction' => 'pages#construction'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
