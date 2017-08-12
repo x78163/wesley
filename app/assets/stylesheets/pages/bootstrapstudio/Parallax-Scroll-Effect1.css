@@ -21,7 +21,7 @@
 #box-3 {
   height:100vh;
   width:100%;
-  background-image:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 7%), url(http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502405938/congregation_jcgu3y.jpg);
+  background-image:linear-gradient(-30deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 4%), url(http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502405938/congregation_jcgu3y.jpg);
   background-size:cover;
   display:table;
   background-attachment:fixed;
@@ -47,7 +47,7 @@ img {
 #box-4 {
   height:100vh;
   width:100%;
-  background-image:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 7%), url(http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502406275/piano_iqf344.jpg);
+  background-image:linear-gradient(-30deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 4%), url(http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502406275/piano_iqf344.jpg);
   background-size:cover;
   display:table;
   background-attachment:fixed;
@@ -57,7 +57,7 @@ img {
 #box-5 {
   height:100vh;
   width:100%;
-  background-image:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 17%), url(http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502406157/constitution_lzxufh.jpg);
+  background-image:linear-gradient(-30deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 4%), url(http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502406157/constitution_lzxufh.jpg);
   background-size:cover;
   display:table;
   background-attachment:fixed;

@@ -3473,7 +3473,7 @@ nav ul a span.badge {
 
 @media only screen and (min-width: 601px) {
   .row .col.m6 {
-    width:50%;
+    width:100%;
     margin-left:auto;
     left:auto;
     right:auto;

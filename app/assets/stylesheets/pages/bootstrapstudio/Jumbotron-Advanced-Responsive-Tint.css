@@ -1,5 +1,5 @@
 section.bg-img-responsive {
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 17%),url("http://media.istockphoto.com/photos/mature-man-walking-dog-in-frosty-landscape-picture-id473423242?s=2048x2048");
+  background-image: linear-gradient(-30deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 4%),url("http://media.istockphoto.com/photos/mature-man-walking-dog-in-frosty-landscape-picture-id473423242?s=2048x2048");
   background-repeat:no-repeat;
   position:relative;
   min-width:100%;
@@ -9,7 +9,7 @@ section.bg-img-responsive {
 }
 
 .jumbotron {
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 17%),url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502406310/lawnangelcross_rysnhe.jpg');
+  background-image: linear-gradient(-30deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 4%),url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502406310/lawnangelcross_rysnhe.jpg');
   background-repeat:no-repeat;
   position:relative;
   background-size:cover;
