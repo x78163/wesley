@@ -47,3 +47,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
 end
+
+group :production, :staging do
+      gem 'pg'
+      gem 'rails_12factor'
+    end
