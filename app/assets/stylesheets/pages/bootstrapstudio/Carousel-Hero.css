@@ -1,0 +1,48 @@
+div.jumbotron.carousel-hero {
+  color:#fff;
+  text-align:center;
+
+
+  margin-bottom:0;
+  margin-top: 10%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+div.jumbotron.hero-1 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558668/Capture30_om4v8e.jpg');
+display:block;margin-left:auto;margin-right:auto;
+}
+
+div.jumbotron.hero-2 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558666/Capture23_z1ruw7.jpg');
+}
+
+div.jumbotron.hero-3 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558659/Capture4_ea2y1t.jpg');
+}
+div.jumbotron.hero-4 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558658/Capture6_poxjre.jpg');
+}div.jumbotron.hero-5 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558663/Capture15_lm1abn.jpg');
+}div.jumbotron.hero-6 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558663/Capture15_lm1abn.jpg');
+}div.jumbotron.hero-7 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558668/Capture28_b1crhg.jpg');
+}div.jumbotron.hero-8 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558660/Capture11_j8anyi.jpg');
+}div.jumbotron.hero-9 {
+  background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558661/Capture8_bzzvfp.jpg');
+}
+h1.hero-title, h2.hero-title, h3.hero-title {
+  text-shadow:0 3px 3px rgba(0,0,0,0.4);
+  color:#fff;
+}
+
+p.hero-subtitle {
+  max-width:600px;
+  margin:25px auto;
+  padding:10px 15px;
+  color:#fff;
+}
+

@@ -1,0 +1,123 @@
+
+ <nav class="navbar navbar-default" style="font-size: 3rem;    min-height: 70px;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img alt="Brand" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" style="width:38px; height:47px;margin-bottom: 5px;></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><div class="navbar-wagon">
+  <!-- Logo -->
+<a class="navbar-wagon-brand" href="/">    <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" style="width: 1%;">
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <!-- Text link -->
+    <a href="https://www.lewagon.com" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Ministry", sermons_path%></a>
+
+    <!-- Text link -->
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Sermons", sermons_path%></a>
+
+    <!-- Text link -->
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Prayers", sermons_path%></a>
+   <!-- Text link -->
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Calendar", sermons_path%></a>
+    <!-- Text link -->
+    <a href="" class="navbar-wagon-item navbar-wagon-link"><%= link_to "Newsletter", sermons_path%></a>
+    <!-- Notification link-->
+    <%= link_to "Inbox", mailbox_inbox_path %>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">
+      <div class="badge-container">
+        <i class="fa fa-envelope-o"></i>
+        <div class="badge badge-blue">2</div>
+      </div>
+    </a>
+
+    <!-- Profile picture and dropdown -->
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+ <% avatar_url =  "http://placehold.it/30x30" %>
+        <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Our Ministry</a></li>
+          <li><a href="#">Bulletins</a></li>
+          <li><a href="#">Prayer Requests</a></li>
+          <li><a href="#">Upcoming Events</a></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, style: "text-decoration: none; font-size:14px; color: #9F9F9F;" %></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Button (call-to-action) -->
+    <% if user_signed_in? %>
+        <li><%= link_to "Hello, #{current_user.first}", "#" %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+        <li class="active"><%= link_to "Login", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+    <% end %>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><%= link_to "Sermons", sermons_path, style: "text-decoration: none; font-size:14px;; margin: 10px; color: #9F9F9F;" %></li>
+        <li><%= link_to "Sermons", sermons_path, style: "text-decoration: none; font-size:14px; margin: 10px; color: #9F9F9F;" %></li>
+        <% if user_signed_in? %>
+        <!-- add in the messages section -->
+        <li><%= link_to "Profile", sermons_path(current_user.id), style: "text-decoration: none; font-size:14px; margin:10px;"%></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, style: "text-decoration: none; font-size:14px; ; margin: 10px; color: #9F9F9F;" %></li>
+        <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path, style: "text-decoration: none; font-size:14px; margin: 10px; color: #9F9F9F;" %></li>
+        <li><%= link_to "Login", new_user_session_path, style: "text-decoration: none; font-size:14px; margin: 10px; color: #9F9F9F;" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
