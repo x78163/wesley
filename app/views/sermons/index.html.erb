@@ -1,4 +1,14 @@
 
+<div class="jumbotron-circular-addon-wrapper">
+        <div class="jumbotron-addon jumbotron-addon-top jumbotron-addon-circle"><span class="bg-primary glyphicon glyphicon-star"> </span></div>
+        <div class="jumbotron">
+            <h1>Jumbotron Circular Addon</h1>
+            <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+            <p><a class="btn btn-default" role="button" href="#">Learn more</a></p>
+        </div>
+        <div class="jumbotron-addon jumbotron-addon-bottom jumbotron-addon-circle"><span class="bg-primary">#</span></div>
+    </div>
+
 <% @sermon.each do |sermon| %>
 
  <div class="col-sm-3">
@@ -21,8 +31,27 @@
                 </article>
 
             </div>
+<div class="article-list">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Sermons </h2>
+                <p class="text-center">Welcome to our Sermon archive. Please feel free to click on any Sermon. You can read the Sermon notes, listen to the sermon and even download it to your computer or phone!</p>
+            </div>
+            <div class="row articles">
+                <div class="col-md-4 col-sm-6 item">
+                    <a href="#"><img class="img-responsive" src="assets/imgages/5.jpg"></a>
+                    <h3 class="name"><%=sermon.title  %></h3>
+                    <p class="description">A<%=sermon.description  %></p><%= link_to "v", sermon_path(sermon) %>/i></a></div>
+            </div>
+        </div>
+    </div>
+
 <% end %>
 <br><br>
 <br>
+
+
+
+
 <%= link_to "new", new_sermon_path %>
 
