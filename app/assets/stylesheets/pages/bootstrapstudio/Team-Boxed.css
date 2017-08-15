@@ -1,10 +1,11 @@
 .team-boxed {
   color:#313437;
-  background-color:#eef4f7;
+  background-color:##555555;
 }
 
 .team-boxed p {
   color:#7d8285;
+      width: 100%;
 }
 
 .team-boxed h2 {
@@ -33,11 +34,12 @@
 }
 
 .team-boxed .people {
-  padding:61% 0;
+  padding:2%% 0;
 }
 
 .team-boxed .item {
   text-align:center;
+
 }
 
 .team-boxed .item .box {
@@ -45,6 +47,7 @@
   padding:30px;
   background-color:#fff;
   margin-bottom:30px;
+  border-radius: 2%;
 }
 
 .team-boxed .item .name {
