@@ -2,17 +2,54 @@
 <% if @sermon.audio? %>
 
   <% audio = @sermon.audio.path %>
-<%= @sermon.title %>
-<br>
-<%= @sermon %>
-<%= @sermon.speaker %>
-<br>
-<%= @sermon.description %>
-<br>
-<%= @sermon.speakdate %>
-<br>
-<audio controls="" style="background-color:gray;" name="media"><source src=<%= cl_video_path(audio) %> type="audio/mpeg"></audio>
+
+
+
+
+
+
+
+
+<span class="song-loader"></span>
+<h5>Please wait.. <br/>while song is loading..</h5>
+
+<div class="wrapper">
+
+  <div class="music music-cover">
+
+    <img src="http://www.cbmcint.com/wp-content/uploads/2016/06/August-8-MM.jpg" />
+  </div>
+  <div class="music album-controls">
+    <img src="https://s5.postimg.org/of3w8v1d3/Soch_Na_Sake_Lyrics_Airlift.jpg" alt="" class="album-img" />
+    <div class="album-info">
+      <span class="album-title"><%= @sermon.title %></span>
+      <span class="song-title"><%= @sermon.description %></span>
+
+    </div>
+  </div>
+  <div class="music music-controls">
+    <span class="seek-bar">
+      <span class="knot"></span>
+    </span>
+    <span class="song-buffer"></span>
+    <span class="song-current-time">00:00</span><span class="play">
+    <i class="fa fa-play" aria-hidden="true"></i>
+    <span class="song-duration">00:00</span>
+    </span>
+  </div>
 </div>
+<audio controls id="music-player" preload="auto">
+  <source src=<%= cl_video_path(audio) %> type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<div class="credit">
+  Inspired By
+  <a target="_blank" href="https://dribbble.com/shots/2597693-Cassette-MiniPlayer">
+    <img src="https://s5.postimg.org/xkc92q4rr/Logo.png" alt="Dribbble Logo" class="d-logo" />
+  </a>
+</div>
+
 <% else %>
 Sorry, No audio!!!
 <% end %>
@@ -20,7 +57,9 @@ Sorry, No audio!!!
 <%= link_to "Delete", sermon_path(@sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-book-show" %>
 <%= link_to "edit", edit_sermon_path %>
 <%= link_to "new", new_sermon_path %>
+<!--
+  Song 1 :- http://searchandhra.in/hindi/Airlift/Soch%20Na%20Sake.mp3
 
-
-
-
+  Ringtone :-
+http://www.darksidev2.com/ringtone/Paradise%20City.mp3
+-->

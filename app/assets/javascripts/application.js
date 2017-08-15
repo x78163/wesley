@@ -14,3 +14,4 @@
 // app/assets/javascripts/Simple-Slider.js
 // app/assets/javascripts/Slider_Carousel_webalgustocom.js
 // app/assets/javascripts/navbar.js
+// app/assets/javascripts/player.js
