@@ -5,16 +5,16 @@
 <div class="button"></div>
 <ul style="background-color: rgba(0, 0, 0, 0.48);">
 <li class='active'><a href='/'> HOME</a></li>
-<li><a href='sermons.html'>SERMONS</a></li>
-<li><a href='history.html'>OUR MINISTRY</a>
+<li><a href='/sermons.html'>SERMONS</a></li>
+<li><a href='/history.html'>OUR MINISTRY</a>
    <ul>
-      <li><a href='construction.html'>Newsletters</a>
+      <li><a href='/construction.html'>Newsletters</a>
          <ul>
             <li><a href='#'>Sub Product</a></li>
             <li><a href='#'>Sub Product</a></li>
          </ul>
       </li>
-      <li><a href='construction.html'>Calendar</a>
+      <li><a href='/construction.html'>Calendar</a>
          <ul>
             <li><a href='#'>Sub Product</a></li>
             <li><a href='#'>Sub Product</a></li>
@@ -22,10 +22,19 @@
       </li>
    </ul>
 </li>
-<li><a href='team.html'>OUR LEADERS</a></li>
-<li><a href='#'>MESSAGES</a></li>
-<li><a href='#'>SIGN UP</a></li>
-<li><a href='#'>LOGIN</a></li>
+<li><a href='/team.html'>OUR LEADERS</a></li>
+<% if user_signed_in? %>
+        <li><%= link_to "MY PROFILE", "/" %></li>
+        <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+        <li class="active"><%= link_to "LOGIN", new_user_session_path %></li>
+        <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+    <% end %>
+<li><a href='/mailbox/inbox'><div class="badge-container">
+        <i class="fa fa-envelope-o"></i>
+        <div class="badge badge-blue">2</div>
+      </div></a></li>
+
 </ul>
 </nav>
 </header>

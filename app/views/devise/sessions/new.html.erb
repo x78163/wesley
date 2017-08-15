@@ -1,4 +1,6 @@
-<h2>Log in</h2>
+<div class="container-form" style="">
+<img class="image-form" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502831675/loginred_zyawbq.png" alt="" style="">
+
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
@@ -7,9 +9,10 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <div class="form-actions" style="display: block;margin-left: auto; margin-right: auto;">
+    <%= f.button :submit, "Log in", class: "btn-treehouse" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
