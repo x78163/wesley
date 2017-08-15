@@ -28,7 +28,7 @@
 .parent {
   width:100%;
   height:100vh;
-  overflow:scroll;
+  overflow:auto;
   /*overflow-x:scroll;*/
   overflow-x:hidden;
   white-space:nowrap;
@@ -258,7 +258,7 @@ p {
 }
 
 body, html {
-  overflow:scroll;
+  overflow:auto;
 }
 
 body {
