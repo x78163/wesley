@@ -55,15 +55,24 @@
   <% else %>
   Sorry, No audio!!!
   <% end %>
-<div class="credit">
+
+
+<div class="container" style="text-align: center;margin-top: 10%;">
+
+    <%= link_to "Delete", sermon_path(@sermon) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"}, class: "btn-medium" %>
+  <%= link_to "edit", edit_sermon_path, class: "btn-medium" %>
+  <%= link_to "new" , new_sermon_path, class: "btn-medium" %>
+</div>
+
+<div class="container" style="text-align: center;margin-top: 10%;">
+
+   <div class="credit">
   Brought to you by:
-    <a target="_blank" href="https://dribbble.com/shots/2597693-Cassette-MiniPlayer">
+    <a target="_blank" href="/">
       <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" class="d-logo" />
     </a>
   </div>
-  <%= link_to "Delete", sermon_path(@sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-book-show" %>
-  <%= link_to "edit", edit_sermon_path %>
-  <%= link_to "new", new_sermon_path %>
+</div>
 <!--
   Song 1 :- http://searchandhra.in/hindi/Airlift/Soch%20Na%20Sake.mp3
 
