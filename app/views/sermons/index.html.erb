@@ -1,85 +1,87 @@
 
 <div class="jumbotron-circular-addon-wrapper">
-        <div class="jumbotron-addon jumbotron-addon-top jumbotron-addon-circle"><span class="bg-primary glyphicon glyphicon-star"> </span></div>
-        <div class="jumbotron">
-            <h1>Wesley Sermons</h1>
+  <div class="jumbotron-addon jumbotron-addon-top jumbotron-addon-circle"><span class="bg-primary glyphicon glyphicon-star"> </span></div>
+  <div class="jumbotron">
+    <h1>Wesley Sermons</h1>
 
 
-        </div>
-        <div class="jumbotron-addon jumbotron-addon-bottom jumbotron-addon-circle"><span class="bg-primary">#</span></div>
-    </div>
+  </div>
+  <div class="jumbotron-addon jumbotron-addon-bottom jumbotron-addon-circle"><span class="bg-primary">#</span></div>
+</div>
 
 
 <div class="article-list">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">Sermons </h2>
-                <p class="text-center">Welcome to our Sermon archive. Please feel free to click on any Sermon. You can read the Sermon notes, listen to the sermon and even download it to your computer or phone!</p>
-            </div>
-
-<% @sermon.each do |sermon| %>
-
- <div class="col-sm-3">
-                <article class="col-item">
-                    <div class="photo">
-                        <div class="options-cart-round">
-                            <button class="btn btn-default" title="Listen to Sermon"><%= link_to "v", sermon_path(sermon) %>
-</span></button>
-                        </div>
-                        <a href="#"><img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /></a>
-                    </div>
-                    <div class="info">
-                        <div class="row">
-                            <div class="price-details col-md-6">
-                                <p class="details">Presented By: <%=sermon.speaker  %></p>
-                                <h1><%=sermon.title  %></h1><span class="price-new"><%=sermon.speakdate  %></span></div>
-                        </div>
-                        <%= link_to "Delete", sermon_path(sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "fa fa-trash" %>
-                    </div>
-                </article>
-
-            </div>
-
-
-
-            <div class="row articles">
-                <div class="col-md-4 col-sm-6 item" style="background-color: gray;">
-                    <a href="#"><img class="img-responsive" src="https://unsplash.it/500/300?image=0"></a>
-                    <h3 class="name"><%=sermon.title  %></h3>
-                    <p class="description">A<%=sermon.description  %></p><%= link_to "fa fa-angle-double-down", sermon_path(sermon) %>/i></a></div>
-            </div>
-
-
-
-            <% end %>
-        </div>
+  <div class="container">
+    <div class="intro">
+      <h2 class="text-center">Sermons </h2>
+      <p class="text-center">Welcome to our Sermon archive. Please feel free to click on any Sermon. You can read the Sermon notes, listen to the sermon and even download it to your computer or phone!</p>
     </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
     <% @sermon.each do |sermon| %>
-      <div class="card" style="background-image:  linear-gradient(rgba(0,0,0,-0.2), rgba(0,0,0,1.2)), url('http://www.cbmcint.com/wp-content/uploads/2016/06/August-8-MM.jpg');">
-  <div class="card-category"><%=sermon.speakdate  %></div>
-  <div class="card-description">
-    <h2 style="text-align: center;"><%=sermon.title  %></h2>
-    <p><%=sermon.description  %></p>
-  </div>
-  <i class="card-user fa fa-play play" aria-hidden="true" style="color:white;     font-size: 4em;"></i>
-  <a class="card-link"  ><%= link_to sermon_path(sermon) %></a>
-</div>
-<% end %>
+
+    <div class="col-sm-3">
+      <article class="col-item">
+        <div class="photo">
+          <div class="options-cart-round">
+            <button class="btn btn-default" title="Listen to Sermon"><%= link_to "v", sermon_path(sermon) %>
+            </span></button>
+          </div>
+          <a href="#"><img src="https://unsplash.it/500/300?image=0" class="img-responsive" alt="Product Image" /></a>
+        </div>
+        <div class="info">
+          <div class="row">
+            <div class="price-details col-md-6">
+              <p class="details">Presented By: <%=sermon.speaker  %></p>
+              <h1><%=sermon.title  %></h1><span class="price-new"><%=sermon.speakdate  %></span></div>
+            </div>
+            <%= link_to "Delete", sermon_path(sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "fa fa-trash" %>
+          </div>
+        </article>
+
+      </div>
+
+
+
+      <div class="row articles">
+        <div class="col-md-4 col-sm-6 item" style="background-color: gray;">
+          <a href="#"><img class="img-responsive" src="https://unsplash.it/500/300?image=0"></a>
+          <h3 class="name"><%=sermon.title  %></h3>
+          <p class="description">A<%=sermon.description  %></p><%= link_to "fa fa-angle-double-down", sermon_path(sermon) %>/i></a></div>
+        </div>
+
+
+
+        <% end %>
+      </div>
     </div>
 
-   </div>
-</div>
+    <div class="container">
+      <div class="row">
+        <% @sermon.each do |sermon| %>
+        <div class="col-xs-12 col-sm-4">
+
+          <div class="card" style="background-image:  linear-gradient(rgba(0,0,0,-0.2), rgba(0,0,0,1.2)), url('http://www.cbmcint.com/wp-content/uploads/2016/06/August-8-MM.jpg');">
+            <div class="card-category"><%=sermon.speakdate  %></div>
+            <div class="card-description">
+            <h2 style="text-align: left;"><%=sermon.title  %></h2>
+              <p><%=sermon.description  %></p>
+            </div>
+            <i class="card-user fa fa-play play" aria-hidden="true" style="color:white;     font-size: 4em;"></i>
+            <a class="card-link" <%= link_to "Listen", sermon_path(sermon) %> ></a>
+
+          </div>
+
+        </div>
+          <% end %>
+      </div>
+    </div>
 
 
-<br><br>
-<br>
+    <br><br>
+    <br>
 
 
 
 
-<%= link_to "new", new_sermon_path %>
+    <%= link_to "new", new_sermon_path %>
 

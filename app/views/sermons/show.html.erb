@@ -1,3 +1,4 @@
+<br><br><br><br><br><br><br><br><br>
 <% if @sermon.audio? %>
 
   <% audio = @sermon.audio.path %>
@@ -10,7 +11,7 @@
 <br>
 <%= @sermon.speakdate %>
 <br>
-<video controls=""  name="media"><source src=<%= cl_video_path(audio) %> type="audio/mpeg"></video>
+<audio controls="" style="background-color:gray;" name="media"><source src=<%= cl_video_path(audio) %> type="audio/mpeg"></audio>
 </div>
 <% else %>
 Sorry, No audio!!!
@@ -19,3 +20,7 @@ Sorry, No audio!!!
 <%= link_to "Delete", sermon_path(@sermon), method: :delete, data: { confirm: "Are you sure?"}, class: "btn-book-show" %>
 <%= link_to "edit", edit_sermon_path %>
 <%= link_to "new", new_sermon_path %>
+
+
+
+
