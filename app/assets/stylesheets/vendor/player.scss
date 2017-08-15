@@ -1,0 +1,366 @@
+*{
+  margin:0;
+  padding:0;
+  outline:0;
+}
+
+body{
+  background:#aea770;
+  font-family:Verdana;
+}
+
+div.wrapper{
+  position:relative;
+      width: 380px;
+    height: 530px;
+  margin:0 auto;
+  box-shadow:0px 80px 35px -40px rgba(84,75,33,0.4);
+  transform-origin:top center;
+  /*transform:translateY(-570px);*/
+}
+
+.showMP1{
+  animation: showMusicPlayer 1000ms 300ms ease-in-out forwards;
+}
+
+h5{
+  position:absolute;
+  left:50%;
+  text-align:center;
+  margin-left:-60px;
+  margin-top:200px;
+  font-size:10px;
+  color:rgba(0,0,0,1);
+  animation:pw 900ms ease-in-out infinite;
+}
+
+@keyframes pw{
+  0%,100%{
+    opacity:1;
+  }
+  70%{
+    opacity:0.7;
+  }
+}
+
+@keyframes showMusicPlayer{
+  0%{
+    transform:translateY(-550px);
+  }
+  80%{
+    transform:translateY(10px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+.song-loader{
+  position:absolute;
+  width:4px;
+  height:70px;
+  background:#a26c37;
+  display:inline-block;
+  left:50%;
+  top:120px;
+  margin-left:-2px;
+  opacity:1;
+  animation:dancingBars 1000ms ease-in infinite;
+}
+
+.song-loader-anim{
+  animation:dancingBars 1000ms ease-in infinite;
+}
+
+.song-loader:after,.song-loader:before{
+  position:absolute;
+  content:'';
+  width:4px;
+  height:70px;
+  background:#a26c37;
+  display:inline-block;
+}
+
+.song-loader:after{
+  margin-left:10px;
+  animation:dancingBars 900ms 500ms ease-in infinite;
+}
+
+.song-loader:before{
+  margin-left:-10px;
+  background:#a26c37;
+  animation:dancingBars 700ms 100ms ease-in infinite;
+}
+
+@keyframes dancingBars{
+  0%,100%{
+    transform:scaleY(1);
+    opacity:1;
+  }
+  50%{
+    transform:scaleY(0.2);
+    opacity:0.4;
+  }
+  80%{
+    transform:scaleY(1.2);
+    opacity:0.9;
+  }
+}
+
+div.wrapper:after{
+  position:absolute;
+  content:'';
+  width:95%;
+  height:15px;
+  background:rgba(0,0,0,0.2);
+  display:block;
+  left:2.5%;
+  bottom:-37px;
+  border-radius:100%;
+  -webkit-filter:blur(2px);
+  -moz-filter:blur(2px);
+  -ms-filter:blur(2px);
+  filter:blur(2px);
+  /*box-shadow:0px 20px 8px 7px rgba(112,79,122,0.4);*/
+  z-index:-1;
+}
+
+.music-cover{
+  height:42.5%;
+  background:#a26c37;
+  box-shadow:inset 0px 0px 225px rgba(0,0,0,0.3);
+  text-align:center;
+  overflow:hidden;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.cover-img{
+  background-size:cover;
+  margin-top:90px;
+  border-radius:8px;
+  border-top:2px solid  rgba(255,255,255,0.4);
+  opacity:0.9;
+}
+
+.album-controls{
+  position:relative;
+  height:42.5%;
+  background:#aa92a8;
+  border-top:2px solid rgba(255,255,255,0.2);
+  text-align:center;
+  overflow:hidden;
+  box-shadow:inset 0px 0px 215px 50px rgba(135,116,69,1);
+}
+
+.album-img{
+  width:395px;
+  margin-top:-135px;
+  border-radius:8px;
+  border-top:2px solid  rgba(255,255,255,0.4);
+  -webkit-filter:blur(25px);
+  -moz-filter:blur(25px);
+  -ms-filter:blur(25px);
+  filter:blur(25px);
+}
+
+.album-info{
+  position:absolute;
+  width:100%;
+  background:transparent;
+  top:0;
+}
+
+.album-info span{
+  width:100%;
+  display:block;
+  text-align:center;
+  background:transparent;
+  text-transform:uppercase;
+}
+
+span.album-title{
+  color:#fff;
+  font-size:19px;
+  font-weight:bold;
+  margin-top:45px;
+}
+
+span.song-title{
+  font-size:18px;
+  margin-top:21px;
+  color:rgba(255,255,255,1);
+}
+
+.song-utility{
+  margin-top:25px;
+}
+
+span .fa{
+  color:rgba(255,255,255,0.7);
+  background:transparent;
+  padding:10px 20px;
+  font-size:35px;
+  margin:0 10px;
+}
+
+span .fa-retweet, span .fa-home{
+  color:rgba(255,255,255,1);
+}
+
+.music-controls{
+  position:relative;
+  height:20%;
+  background:rgba(255,255,255,1);
+  border-radius:0px 0px 14px 14px;
+  box-shadow:inset 0px -55px 15px -50px #c0bf99;
+  /*overflow:hidden;*/
+}
+
+.music-controls > span{
+  display:block;
+  height:100%;
+  float:left;
+  text-align:center;
+  background:#fff;
+  line-height:580%;
+  transition:all 0.3s linear;
+}
+
+.music-controls .seek-bar, .music-controls:before{
+  position:absolute;
+  width:100%;
+  height:7px;
+  content:'';
+  display:block;
+  clear:both;
+  border-bottom:1px solid rgba(0,0,0,0.2);
+}
+
+.music-controls .seek-bar{
+  width:0%;
+  height:3px;
+  top:1.5px;
+  background:#794e24;
+}
+
+.music-controls .song-buffer{
+  position:absolute;
+  display:inline-block;
+  width:0%;
+  height:3px;
+  top:2px;
+  left:0;
+  background:#794e24;
+  opacity:0.4;
+}
+
+
+.music-controls:before{
+  background:rgba(255,255,255,1);
+}
+
+.knot{
+  position:absolute;
+  z-index:99;
+  top:-6px;
+  right:-8px;
+  width:8px;
+  height:8px;
+  background:#fff;
+  border-radius:100%;
+  border:4px solid #794e24;
+  display:inline-block;
+  box-shadow:1px 1px 2px rgba(0,0,0,0.4);
+  transition:all 300ms ease-in-out;
+  opacity:1;
+}
+
+.music-controls span.song-current-time{
+  width:30%;
+  font-size:18px;
+  color:rgba(43,31,11,0.7);
+  border-radius:0 0 0 14px;
+  opacity:0;
+  transition:opacity 200ms ease-in;
+}
+
+.music-controls span.song-duration{
+  opacity:0;
+  transition:opacity 200ms ease-in;
+}
+
+.music-controls span.play{
+  width:70%;
+  font-size:18px;
+  box-shadow:inset 100px 55px 200px -50px rgba(182,181,141,0.7);
+  text-align:left;
+  border-radius:0 0 14px 0;
+}
+
+
+.music-controls span.play:hover{
+  box-shadow:inset 100px 55px 200px -50px rgba(182,181,141,0.9);
+}
+
+.fa-play, .fa-pause{
+  position:relative;
+  color:rgba(84,75,33,1) !important;
+  top:6px;
+  left:45px;
+  transition:all 0.3s linear;
+  cursor:default;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 300ms ease-in;
+}
+
+.fa-play:hover, .fa-pause:hover{
+  color:rgba(84,75,33,0.9) !important;
+}
+
+.music-controls span.song-duration{
+  position:absolute;
+  font-size:18px;
+  background:transparent;
+  color:rgba(43,31,11,1);
+  right:40px;
+}
+
+#music-player{
+  opacity:0;
+  position:absolute;
+  top:-100px;
+}
+
+.is-animate {
+  transition:width 300ms linear;
+}
+
+
+div.credit {
+  position: absolute;
+  padding: 0px 10px;
+  padding-bottom: 8px;
+  height: 15px;
+  right: 5px;
+  top: 5px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 7px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -15px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+
+div.credit:hover{
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+div.credit img {
+  position: relative;
+  width: 14px;
+  margin-left: 3px;
+  top: 4px;
+}
