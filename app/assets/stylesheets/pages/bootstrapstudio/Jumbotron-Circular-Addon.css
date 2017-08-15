@@ -12,6 +12,7 @@
   text-align:center;
   padding-left:12px;
   padding-right:12px;
+  background-size: cover;
 }
 
 .jumbotron-circular-addon-wrapper .jumbotron-addon {
