@@ -29,8 +29,8 @@
         <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
 <li><a href='/mailbox/inbox'>
 <div class="badge-container">
-          <i class="fa fa-envelope-o"></i>
-          <% @count = current_user.mailbox.inbox(:read => false).count(:id).to_i %>
+          <i class="fa fa-envelope-o">2</i>
+
 
         </div>
       </a></li>
