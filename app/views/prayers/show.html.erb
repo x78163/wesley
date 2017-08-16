@@ -1,0 +1,65 @@
+
+<div class="wrapper">
+
+  <div class="music music-cover">
+
+    <img style=" width: 100%;
+    max-width: 100%;" src="http://www.cbmcint.com/wp-content/uploads/2016/06/August-8-MM.jpg" />
+    <div class="album-info">
+    <span class="album-title" style=" font-size: 6vw;"><%= @sermon.title %></span>
+    <span class="album-title" style=" font-size: 2vw;"><%= @sermon.speakdate.to_formatted_s(:long) %></span>
+    </div>
+  </div>
+  <div class="music album-controls">
+    <img style=" width: 100%;
+    max-width: 100%;" src="http://www.cbmcint.com/wp-content/uploads/2016/06/August-8-MM.jpg" alt="" class="album-img" />
+    <div class="album-info">
+      <span class="album-title"><%= @sermon.speaker %></span>
+<hr style="margin-left:10%; margin-right: 10%;">
+      <span class="song-title"><%= @sermon.description %></span>
+
+    </div>
+  </div>
+  <div class="music music-controls">
+    <span class="seek-bar">
+      <span class="knot"></span>
+    </span>
+    <span class="song-buffer"></span>
+    <span class="song-current-time">00:00</span><span class="play">
+    <i class="fa fa-play" aria-hidden="true"></i>
+    <span class="song-duration">00:00</span>
+  </span>
+</div>
+</div>
+<audio controls id="music-player" preload="auto">
+  <source src=<%= cl_video_path(audio) %> type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+
+
+
+
+
+<div class="container" style="text-align: center;margin-top: 10%;">
+
+    <%= link_to "Delete", sermon_path(@sermon) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"}, class: "btn-medium" %>
+  <%= link_to "edit", edit_sermon_path, class: "btn-medium" %>
+  <%= link_to "new" , new_sermon_path, class: "btn-medium" %>
+</div>
+
+<div class="container" style="text-align: center;margin-top: 10%;">
+
+   <div class="credit">
+  Brought to you by:
+    <a target="_blank" href="/">
+      <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" class="d-logo" />
+    </a>
+  </div>
+</div>
+<!--
+  Song 1 :- http://searchandhra.in/hindi/Airlift/Soch%20Na%20Sake.mp3
+
+  Ringtone :-
+http://www.darksidev2.com/ringtone/Paradise%20City.mp3
+-->

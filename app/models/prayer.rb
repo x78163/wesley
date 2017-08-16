@@ -1,2 +1,4 @@
 class Prayer < ApplicationRecord
+
 end
+

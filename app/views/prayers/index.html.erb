@@ -1,0 +1,58 @@
+<section class="bg-img-responsive" >
+
+        <div class="jumbotron" style="padding:0px;background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502558665/Capture24_hfqh3w.jpg');">
+
+
+    <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502927706/prayer_yfgv8q.png" alt="">
+
+
+
+        </div>
+    </section>
+
+
+
+<div class="article-list">
+  <div class="container">
+    <div class="intro">
+            <p class="text-center">Please Join Us In Saying A Prayer For The Following People</p>
+    </div>
+</div>
+
+
+    <div class="container" style="background: #555;border-radius: 2%">
+      <div class="row">
+        <% @prayer.each do |prayer| %>
+        <div class="col-xs-12 col-sm-4">
+
+          <div class="card" style="background-color:white;">
+            <div class="prayer-card-recipient">Please Pray For: <%=prayer.recipient  %></div>
+            <div class="prayer-card-description">
+            <h2 style="text-align: left;"><%=prayer.description
+              %></h2>
+              <p style="white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;">From: <%=prayer.requestor  %></p>
+            </div>
+            <i class="card-user fa fa-play play" aria-hidden="true" ></i>
+<%= link_to "Delete", prayer_path(@prayer) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"}, class: "btn-medium" %>
+          </div>
+
+        </div>
+          <% end %>
+      </div>
+    </div>
+
+
+
+
+<div class="container" style="text-align: center;margin-top: 5%; padding-bottom: 10%;">
+
+
+  <%= link_to "Add New Prayer Request" , new_prayer_path, class: "btn-treehouse" %>
+</div>
+
+
+
+

@@ -1,0 +1,14 @@
+
+<%= simple_form_for @prayer do |f| %>
+  <%= f.input :requestor %>
+  <%= f.input :recipient %>
+  <%= f.input :description %>
+
+
+
+  <div class="text-center">
+  <br>
+  <%= f.button :submit, class: "btn btn-primary" %>
+  <br>
+  </div>
+<% end %>
