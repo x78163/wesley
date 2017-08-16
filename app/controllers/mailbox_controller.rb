@@ -4,6 +4,7 @@ before_action :authenticate_user!
   def inbox
     @inbox = mailbox.inbox
     @active = :inbox
+    @unread_count=mailbox.inbox(:read => false).count(:id).to_s
   end
 
   def sent

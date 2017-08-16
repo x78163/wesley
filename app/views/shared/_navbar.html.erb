@@ -24,16 +24,25 @@
 </li>
 <li><a href='/team.html'>OUR LEADERS</a></li>
 <% if user_signed_in? %>
+
         <li><%= link_to "MY PROFILE", "/" %></li>
         <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+<li><a href='/mailbox/inbox'>
+<div class="badge-container">
+          <i class="fa fa-envelope-o"></i>
+          <% @count = current_user.mailbox.inbox(:read => false).count(:id).to_i %>
+        <% if  @count != nil%>
+          <div class="badge badge-red"><%= current_user.mailbox.inbox(:read => false).count(:id).to_s%></div>
+
+          <% end %>
+        </div>
+      </a></li>
+
     <% else %>
         <li class="active"><%= link_to "LOGIN", new_user_session_path %></li>
         <li><%= link_to "SIGN UP", new_user_registration_path %></li>
     <% end %>
-<li><a href='/mailbox/inbox'><div class="badge-container">
-        <i class="fa fa-envelope-o"></i>
-        <div class="badge badge-blue">2</div>
-      </div></a></li>
+
 
 </ul>
 </nav>
