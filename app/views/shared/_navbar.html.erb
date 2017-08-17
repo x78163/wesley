@@ -35,16 +35,22 @@
 <% if user_signed_in? %>
         <li><%= link_to "MY PROFILE", "/" %></li>
         <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+
+    <%= link_to  mailbox_inbox_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+        <div class="badge-container">
+          <i class="fa fa-envelope-o"></i>
+          <% @count = current_user.mailbox.inbox(:read => false).count(:id).to_i %>
+        <% if  @count > 0%>
+          <div class="badge badge-blue"><%= current_user.mailbox.inbox(:read => false).count(:id).to_s%></div>
+
+          <% end %>
+        </div>
+<% end %>
     <% else %>
         <li class="active"><%= link_to "LOGIN", new_user_session_path %></li>
         <li><%= link_to "SIGN UP", new_user_registration_path %></li>
     <% end %>
-<li><a href='/mailbox/inbox'>
-<div class="badge-container">
-        <i class="fa fa-envelope-o"></i>
-        <div class="badge badge-blue">2</div>
-      </div>
-      </a></li>
+
 
 </ul>
 </nav>
