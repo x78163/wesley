@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170804172114) do
+ActiveRecord::Schema.define(version: 20170817185405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,19 @@ ActiveRecord::Schema.define(version: 20170804172114) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "eventstart"
+    t.string   "poc"
+    t.string   "phone"
+    t.string   "location"
+    t.string   "description"
+    t.datetime "eventend"
+    t.string   "email"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
