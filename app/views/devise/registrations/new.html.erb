@@ -1,20 +1,33 @@
-<h2>Sign up</h2>
 
+<div class="container-form" style="margin-bottom: 5%;">
+<img class="image-form" style=" width: 40%;" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502934962/signup_uk9tid.png" alt="" style="">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs" >
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :first, required: true, autofocus: true %>
 <%= f.input :last, required: true, autofocus: true %>
 
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password, required: true,   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)%>
     <%= f.input :password_confirmation, required: true %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+<div class="form-actions" style="padding-bottom:5%;">
+    <div style="display: block;
+    margin-right: auto;
+    margin-left: auto; ">
+    <%= f.button :submit, "Sign Up", class: "btn-treehouse", style: "display: block;
+    margin-right: auto;
+    margin-left: auto; " %>
+  </div>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>
+
+
+
+
+
+

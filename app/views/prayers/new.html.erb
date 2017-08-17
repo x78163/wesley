@@ -1,16 +1,26 @@
-<div class="container" style="width: 1290px;">
-  <div class="wrapper">
-    <div class="">
-      <div class="col-md-6">
-        <h1>Let’s upload a new sermon!.</h1>
-        <br>
-        <%= render 'form' %>
-      </div>
+
+<div class="container-form" style="margin-bottom: 5%;">
+<img class="image-form" style=" width: 40%;" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502934686/newprayer_kz7tzk.png" alt="" style="">
+
+<%= simple_form_for @prayer do |f| %>
+  <div class="form-inputs">
 
 
-    </div>
+  <%= f.input :requestor, :label => "Who is this for?" %>
+  <%= f.input :recipient, :label => "How are you related to them?" %>
+  <%= f.input :description, :label => "Please add a description" %>
 
   </div>
-</div>
 
-<br>
+  <div class="form-actions" style="padding-bottom:5%;">
+    <div style="display: block;
+    margin-right: auto;
+    margin-left: auto; ">
+    <%= f.button :submit, "Submit Request", class: "btn-treehouse", style: "display: block;
+    margin-right: auto;
+    margin-left: auto; " %>
+
+ </div>
+  </div>
+<% end %>
+</div>
