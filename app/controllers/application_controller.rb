@@ -8,7 +8,7 @@ def default_url_options
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :email, :last, :first])
 #devise_parameter_sanitizer.for(:sign_up)
    # devise_parameter_sanitizer.for(:account_update)
     # For additional in app/views/devise/registrations/edit.html.erb

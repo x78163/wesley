@@ -8,7 +8,11 @@ class SermonsController < ApplicationController
  end
 
  def new
+  if current_user.admin?
   @sermon = Sermon.new
+else
+redirect_to sermons_path
+end
 end
 
 def create
@@ -18,6 +22,7 @@ def create
   else
     render :new
   end
+
 end
 
 def edit
