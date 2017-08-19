@@ -26,8 +26,12 @@ def create
 end
 
 def edit
+  if current_user.admin?
   @sermon = Sermon.find(params[:id])
   @sermon.save
+  else
+redirect_to sermons_path
+end
 end
 
 def update
@@ -42,9 +46,13 @@ def update
 end
 
 def destroy
+  if current_user.admin?
   @sermon = Sermon.find(params[:id])
   @sermon.destroy
   redirect_to sermons_path
+   else
+redirect_to sermons_path
+end
 end
 
 def sermon_params
