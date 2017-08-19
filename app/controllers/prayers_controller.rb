@@ -9,10 +9,12 @@ def index
 
  def new
   @prayer = Prayer.new
+@prayer.user_id = current_user
 end
 
 def create
   @prayer = Prayer.new(prayer_params)
+
   if @prayer.save
     redirect_to prayers_path
   else
@@ -37,9 +39,15 @@ def update
 end
 
 def destroy
+
   @prayer = Prayer.find(params[:id])
+   if current_user.admin?
   @prayer.destroy
   redirect_to prayers_path
+else
+redirect_to prayers_path
+end
+
 end
 
 def prayer_params

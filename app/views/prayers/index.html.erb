@@ -52,7 +52,12 @@
               max-width: 250px;">From: <%=prayer.requestor  %></p>
             </div>
             <i class="card-user fa fa-play play" aria-hidden="true" ></i>
+         <%   if current_user.admin? %>
+
+
             <%= link_to "Delete", prayer_path(@prayer) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"}, class: "btn-medium" %>
+            <% else %>
+            <% end %>
           </div>
 
         </div>
