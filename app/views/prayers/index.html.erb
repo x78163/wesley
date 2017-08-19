@@ -15,55 +15,51 @@
 <div class="container">
    <div class="row">
       <div class="col-md-12">
-<h4><i class="fa fa-heart" aria-hidden="true" style="display: block; margin-left: auto; margin-right: auto; color: red;"></i></h4>
 
- <h3 style="text-align: center;"> Please Pray For: <br> <br>prayer.recipient </h3>
 
-<p style="text-align: center;"> prayer.description </p>
-<h4 style="text-align: center;"> Requested by: prayer.requestor</h4>
+ <h2 style="text-align: center; color: red;"> Please Join Us In Prayer For:<br></h2>
+
+<p style="text-align: center;"> All members of the Wesley United Methodist Church and the Children of the World  </p>
+<h2><i class="fa fa-heart" aria-hidden="true" style="display: block; margin-left: auto; margin-right: auto; color: red;"></i></h2>
       </div>
   </div>
 
 </div>
 
+<div class="container-prayer" style="margin-right: 10%, margin-left: 10%;border-radius: ">
+<div class="prayer-div">
+  <ul class="prayer-ul">
 
+<% @prayer.each do |prayer| %>
+    <li class="prayer-li">
+       <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" class="prayer-img" style="width: 100px, height: 100px;" />
+      <h3 class="prayer-h3"> <%= prayer.recipient %> </h3>
 
-<div class="article-list">
-  <div class="container">
-    <div class="intro">
-      <p class="text-center">Please Join Us In Saying A Prayer For The Following People</p>
-    </div>
-  </div>
+      <p class="prayer-p"><%= prayer.description %></p>
 
+      <p class="prayer-p">
+      <%   if current_user.admin? || current_user.id == prayer.user_id  %>
 
-  <div class="container" style="background: #555;border-radius: 2%">
-    <div class="row">
-      <% @prayer.each do |prayer| %>
-      <div class="col-xs-12 col-sm-4">
-
-        <div class="card" style="background-color:white;">
-          <div class="prayer-card-recipient">Please Pray For: <%=prayer.recipient  %></div>
-          <div class="prayer-card-description">
-            <h2 style="text-align: left;"><%=prayer.description
-              %></h2>
-              <p style="white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              max-width: 250px;">From: <%=prayer.requestor  %></p>
-            </div>
-            <i class="card-user fa fa-play play" aria-hidden="true" ></i>
-         <%   if current_user.admin? %>
-
-
-            <%= link_to "Delete", prayer_path(@prayer) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"}, class: "btn-medium" %>
+ <%= link_to "edit", edit_prayer_path(prayer), class: "btn-medium" %>
+            <%= link_to "Delete", prayer_path(prayer) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"} %>
             <% else %>
             <% end %>
-          </div>
+            </p>
+    </li>
 
-        </div>
-        <% end %>
-      </div>
-    </div>
+<% end %>
+  </ul>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
 

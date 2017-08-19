@@ -1,0 +1,60 @@
+* {margin: 0; padding: 0;}
+
+.prayer-div {
+  margin: 20px;
+}
+
+.prayer-ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+.prayer-h3 {
+  font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    font-size: 3vw;
+    line-height: 1.5;
+    font-family: Helvetica, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+
+
+
+.prayer-p {
+  font: 2vw Georgia, Times New Roman, serif;
+  color: black;
+}
+
+.prayer-li {
+  padding: 10px;
+  overflow: auto;
+  margin-top:  5%;
+  margin-bottom:  5%;
+}
+
+.prayer-li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.container-prayer{
+
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: white;
+  border-radius: 2%;
+
+}
+
+.prayer-img {
+   float: left;
+  margin: 0 15px 0 0;
+  width: 40px;
+   height: 50px;
+}

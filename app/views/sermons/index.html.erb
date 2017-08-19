@@ -12,38 +12,54 @@
     </section>
 
 
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
 
-<div class="article-list">
-  <div class="container">
-    <div class="intro">
-            <p class="text-center">Welcome to our Sermon archive. Please feel free to click on any Sermon. You can read the Sermon notes, listen to the sermon and even download it to your computer or phone!</p>
-    </div>
+
+ <h2 style="text-align: center; color: red;"> Welcome To Our Sermon Archive!<br></h2>
+
+<p style="text-align: center; margin-right: 20%; margin-left: 20%;"> Feel free to click on any Sermon below to listen to it!    </p>
+
+      </div>
+  </div>
+
+</div>
+
+<div class="container-prayer" style="margin-right: 10%, margin-left: 10%;border-radius: ">
+<div class="prayer-div">
+  <ul class="prayer-ul">
+
+<% @sermon.each do |sermon| %>
+
+<%= link_to sermon_path(sermon) do %>
+
+
+    <li class="prayer-li">
+       <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" class="prayer-img" style="width: 100px, height: 100px;" />
+      <h3 class="prayer-h3"> <%= sermon.title  %> </h3>
+
+      <p class="prayer-p"><%= sermon.description %></p>
+<p class="prayer-p"><%= sermon.speakdate.to_formatted_s(:long) %></p>
+      <p class="prayer-p">
+
+      <%   if current_user.admin?   %>
+
+ <%= link_to "edit", edit_sermon_path(sermon), class: "btn-medium" %>
+            <%= link_to "Delete", sermon_path(sermon) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"} %>
+            <% else %>
+            <% end %>
+            </p>
+    </li>
+<% end %>
+<% end %>
+  </ul>
+</div>
 </div>
 
 
-    <div class="container" style="background: #555;border-radius: 2%">
-      <div class="row">
-        <% @sermon.each do |sermon| %>
-        <div class="col-xs-12 col-sm-4">
 
-          <div class="card" style="background-image:  linear-gradient(rgba(0,0,0,-0.2), rgba(0,0,0,1.2)), url('http://www.cbmcint.com/wp-content/uploads/2016/06/August-8-MM.jpg');">
-            <div class="card-category"><%=sermon.speakdate.to_formatted_s(:long)  %></div>
-            <div class="card-description">
-            <h2 style="text-align: left;"><%=sermon.title  %></h2>
-              <p style="white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 250px;"><%=sermon.description  %></p>
-            </div>
-            <i class="card-user fa fa-play play" aria-hidden="true" ></i>
-            <a class="card-link" <%= link_to "Listen", sermon_path(sermon) %> ></a>
 
-          </div>
-
-        </div>
-          <% end %>
-      </div>
-    </div>
 
 
 

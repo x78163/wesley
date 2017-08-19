@@ -1,1 +1,32 @@
-  <%= render 'form' %>
+
+<div class="container-form" style="margin-bottom: 5%;">
+<img style=" width: 50%;"class="image-form" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502934314/newsermon_rmy26i.png" alt="" style="">
+
+<%= simple_form_for @sermon do |f| %>
+  <div class="form-inputs">
+
+
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :speaker %>
+  <%= f.input :speakdate, :label => "Date" %>
+
+  <%= f.input :audio, as: :attachinary, class: "btn-treehouse" %>
+
+
+
+
+  </div>
+
+  <div class="form-actions" style="padding-bottom:5%;">
+    <div style="display: block;
+    margin-right: auto;
+    margin-left: auto; ">
+    <%= f.button :submit, "Upload Sermon", class: "btn-treehouse", style: "display: block;
+    margin-right: auto;
+    margin-left: auto; " %>
+
+ </div>
+  </div>
+<% end %>
+</div>

@@ -9,11 +9,12 @@ def index
 
  def new
   @prayer = Prayer.new
-@prayer.user_id = current_user
+
 end
 
 def create
   @prayer = Prayer.new(prayer_params)
+@prayer.user_id = current_user.id
 
   if @prayer.save
     redirect_to prayers_path
