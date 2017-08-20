@@ -7,7 +7,9 @@
 
 
   <%= f.input :title %>
-  <%= f.input :description %>
+  <%= f.label :description %>
+  <%= f.text_area :description, class: 'form-control',placeholder: "Summarize the sermon here....", rows: 5 %>
+  <br>
   <%= f.input :speaker %>
   <%= f.input :speakdate, :label => "Date" %>
 

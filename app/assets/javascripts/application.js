@@ -9,9 +9,11 @@
 //= require jquery-fileupload/basic
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
+
 // app/assets/javascripts/audioButton.js
 // app/assets/javascripts/image-card-materialize.js
 // app/assets/javascripts/Simple-Slider.js
 // app/assets/javascripts/Slider_Carousel_webalgustocom.js
 // app/assets/javascripts/navbar.js
 // app/assets/javascripts/player.js
+

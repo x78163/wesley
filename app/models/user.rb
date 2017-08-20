@@ -5,6 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 acts_as_messageable
 
+validates :email, :first,  :last, :username, presence: true
+validates :username, uniqueness: true
+
+
+
   def mailboxer_name
     self.name
   end
