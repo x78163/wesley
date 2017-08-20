@@ -41,14 +41,15 @@
 
       <p class="prayer-p">
 
-      <% if current_user=nil?  %>
-      <%   if current_user.admin? || current_user.id == prayer.user_id  %>
+      <% if current_user.nil?  %>
+
+            <% else %>
+             <%   if current_user.admin? || current_user.id == prayer.user_id  %>
 
       <%= link_to "edit", edit_prayer_path(prayer), class: "btn-medium" %>
             <%= link_to "Delete", prayer_path(prayer) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"} %>
             <% else %>
             <% end %>
-            <% else %>
         <% end %>
             </p>
     </li>
@@ -72,8 +73,10 @@
 
     <div class="container" style="text-align: center;margin-top: 5%; padding-bottom: 10%;">
 
-
+<% if current_user.nil?  %>
+<% else %>
       <%= link_to "Add New Prayer Request" , new_prayer_path, class: "btn-treehouse" %>
+        <% end %>
     </div>
 
 
