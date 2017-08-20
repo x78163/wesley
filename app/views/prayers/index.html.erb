@@ -33,9 +33,11 @@
 <% @prayer.each do |prayer| %>
     <li class="prayer-li">
        <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" class="prayer-img" style="width: 100px, height: 100px;" />
-      <h3 class="prayer-h3"> <%= prayer.recipient %> </h3>
+      <h3 class="prayer-h3" > <%= prayer.recipient %> </h3>
 
-      <p class="prayer-p"><%= prayer.description %></p>
+      <p class="prayer-p" >-<%= prayer.description %></p>
+
+
 
       <p class="prayer-p">
       <%   if current_user.admin? || current_user.id == prayer.user_id  %>
