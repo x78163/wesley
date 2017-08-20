@@ -21,5 +21,7 @@ Rails.application.routes.draw do
    get '/team' => 'pages#team'
    get '/indexhome' => 'pages#indexhome'
    get '/construction' => 'pages#construction'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,5 @@
 class PrayersController < ApplicationController
+   skip_before_action :authenticate_user!, only: [:index]
 def index
     @prayer = Prayer.all
   end
@@ -11,6 +12,7 @@ def index
   @prayer = Prayer.new
 
 end
+
 
 def create
   @prayer = Prayer.new(prayer_params)

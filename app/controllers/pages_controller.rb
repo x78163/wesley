@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
- skip_before_action :authenticate_user!, only: :home
+ skip_before_action :authenticate_user!, only: [:home, :team, :history, :construction]
   def home
 
   end
@@ -17,4 +17,5 @@ class PagesController < ApplicationController
 
   def construction
   end
+
 end
