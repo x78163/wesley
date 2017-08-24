@@ -1,2 +1,26 @@
-<h1>Memoriams#new</h1>
-<p>Find me in app/views/memoriams/new.html.erb</p>
+
+<div class="container-form" style="margin-bottom: 90%;">
+<img class="image-form" style=" width: 40%;" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1503617094/bennett_xkrtdd.png" alt="" style="">
+
+<%= simple_form_for @memoriam do |f| %>
+  <div class="form-inputs">
+
+
+
+  <%= f.input :comment, :label => "What would you like to say to Reverend Bennett and his family?" %>
+  <%= f.input :commentor, :label => "PWho is submitting this prayer and how did you know Reverend Bennett?" %>
+
+  </div>
+
+  <div class="form-actions" style="padding-bottom:5%;">
+    <div style="display: block;
+    margin-right: auto;
+    margin-left: auto; ">
+    <%= f.button :submit, "Post Message", class: "btn-treehouse", style: "display: block;
+    margin-right: auto;
+    margin-left: auto; " %>
+
+ </div>
+  </div>
+<% end %>
+</div>

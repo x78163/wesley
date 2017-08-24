@@ -1,2 +1,78 @@
-<h1>Memoriams#index</h1>
-<p>Find me in app/views/memoriams/index.html.erb</p>
+<section class="bg-img-responsive" >
+
+  <div class="jumbotron" style="padding:0px;background-image:url('http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/e_brightness:-17,o_75/v1503616630/Bennett_Background_hf2yte.jpg');">
+
+
+    <img style="    padding-top: 9%;" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1503617094/bennett_xkrtdd.png" alt="">
+
+
+
+  </div>
+</section>
+
+
+
+<div class="container">
+   <div class="row">
+      <div class="col-md-12">
+
+
+ <h2 style="text-align: center; color: red;"> Please Join Us In Remembrance of Reverand Dr. Bennett<br></h2>
+
+<p style="text-align: left;"> &emsp; &emsp;Our beloved Pastor, Reverend Dr. Bennett, went home to meet his Lord this morning, 24 August 2017. He first served Wesley United Methodist church in 1957, after his retirement he came back to serve at Wesley where he served for the past 19 years.
+<br><br> &emsp; &emsp;Pastor Bennett has served his Lord and the Methodist church for over 62 years. He always said he was just a simple man from Arkansas and wanted to be remembered as a man who truly love the Lord. Pastor Bennett was a man of faith and accepted his charge to preach and teach the Gospel of Jesus Christ to everyone who crossed his path. His knowledge of God's word was immeasurable and his ability to share the love of God was profound. His life was truly an example to be followed. <br><br>
+&emsp; &emsp;In his free time he loved reading, studying the Bible, walking and, when his health permitted, visiting his cherished childhood farm in Arkansas. Pastor Bennett will be missed by all those fortunate enough to have known this man of God, who led his life by example. To know Reverend Dr. Bennett was to love him.
+  </p>
+
+      </div>
+  </div>
+
+</div>
+
+<div class="container-prayer" style="margin-right: 10%, margin-left: 10%;border-radius: ">
+<div class="prayer-div">
+  <ul class="prayer-ul">
+
+<% @memoriam.each do |memoriam| %>
+    <li class="prayer-li">
+       <img src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502482668/flamelogo_xphv4h.png" class="prayer-img" style="width: 100px, height: 100px;" />
+
+
+
+
+<h3 class="prayer-p" style="font-size: 2vw;"> <%= memoriam.comment %> </h3>
+<p class="prayer-p" >-<%= memoriam.commentor %></p>
+
+      <p class="prayer-p">
+
+
+            </p>
+    </li>
+
+<% end %>
+  </ul>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container" style="text-align: center;margin-top: 5%; padding-bottom: 10%;">
+
+
+      <%= link_to "Add a Prayer" , new_memoriam_path, class: "btn-treehouse" %>
+
+    </div>
+
+
+
+
