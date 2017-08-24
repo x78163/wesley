@@ -42,19 +42,21 @@
       <p class="prayer-p"><%= sermon.description %></p>
 <p class="prayer-p"><%= sermon.speakdate.to_formatted_s(:long) %></p>
       <p class="prayer-p">
-<% if current_user=nil?  %>
-      <%   if current_user.admin?   %>
 
- <%= link_to "edit", edit_sermon_path(sermon), class: "btn-medium" %>
-            <%= link_to "Delete", sermon_path(sermon) , class: "btn-medium" , method: :delete, data: { confirm: "Are you sure?"} %>
-            <% else %>
-            <% end %>
-
-             <% else %>
-        <% end %>
             </p>
     </li>
-<% end %>
+
+<% if current_user.nil?  %>
+
+   <% else %>
+   <% if current_user.admin? %>
+    <%= link_to "Delete", sermon_path(sermon) , class: "btn-treehouse" , method: :delete, data: { confirm: "Are you sure?"}, class: "btn-treehouse" %>
+  <%= link_to "edit", edit_sermon_path(sermon), class: "btn-treehouse" %>
+
+  <% else %>
+  <% end %>
+  <% end %>
+  <% end %>
 <% end %>
   </ul>
 </div>

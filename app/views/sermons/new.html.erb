@@ -6,11 +6,11 @@
   <div class="form-inputs">
 
 
-  <%= f.input :title %>
+  <%= f.input :title,  input_html: {style: 'font-size:3vh;'}  %>
   <%= f.label :description %>
-  <%= f.text_area :description, class: 'form-control',placeholder: "Summarize the sermon here....", rows: 5 %>
+  <%= f.text_area :description, class: 'form-control',placeholder: "Summarize the sermon here....", rows: 5,  input_html: {style: 'font-size:2vh;'} %>
   <br>
-  <%= f.input :speaker %>
+  <%= f.input :speaker ,  input_html: {style: 'font-size:3vh;'}%>
   <%= f.input :speakdate, :label => "Date" %>
 
   <%= f.input :audio, as: :attachinary, :label => "Browse my computer for the Sermon Audio File" %>
