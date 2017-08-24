@@ -1,0 +1,29 @@
+<div class="container-form" style="margin-bottom: 65%;">
+<img class="image-form" style=" width: 40%;" src="http://res.cloudinary.com/wesley-united-methodist-kc/image/upload/v1502934686/newprayer_kz7tzk.png" alt="" style="">
+
+<%= simple_form_for @memoriam do |f| %>
+  <div class="form-inputs">
+
+
+
+  <%= f.input :commentor, :label => "Who are you?" %>
+  <%= f.input :comment, :label => "Please write some kind words for Rev Bennet and his family." %>
+
+  </div>
+
+  <div class="form-actions" style="padding-bottom:5%;">
+    <div style="display: block;
+    margin-right: auto;
+    margin-left: auto; ">
+    <%= f.button :submit, "Submit", class: "btn-treehouse", style: "display: block;
+    margin-right: auto;
+    margin-left: auto; " %>
+
+ </div>
+  </div>
+<% end %>
+</div>
+
+
+
+

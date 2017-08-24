@@ -1,8 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'memoriams/index'
+
+  get 'memoriams/new'
+
+  get 'memoriams/create'
+
+  get 'memoriams/edit'
+
+  get 'memoriams/update'
+
+  get 'memoriams/destroy'
+
   devise_for :users
  resources :sermons
  resources :prayers
+ resources :memoriams
 
   mount Attachinary::Engine => "/attachinary"
   root to: 'pages#home'
