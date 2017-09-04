@@ -27,6 +27,15 @@
   background-attachment:fixed;
   background-position:center;
 }
+#box-6 {
+  height:100vh;
+  width:100%;
+  background-image:linear-gradient(-30deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.4) 4%), url(https://res.cloudinary.com/wesley-united-methodist-kc/image/upload/a_0/v1504486624/DSC_1504_xtdg7p.jpg);
+  background-size:cover;
+  display:table;
+  background-attachment:fixed;
+  background-position:center;
+}
 
 h1 {
   font-family:arial black;
