@@ -30,7 +30,8 @@
 <div class="prayer-div">
   <ul class="prayer-ul">
 
-<% @sermon.each do |sermon| %>
+
+<% @sermon.reverse.each do |sermon| %>
 
 <%= link_to sermon_path(sermon) do %>
 
