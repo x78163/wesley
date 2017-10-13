@@ -2,7 +2,7 @@ class SermonsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     # @sermon = Sermon.all
-    @sermon = Sermon.order('speakdate DESC')
+    @sermon = Sermon.order('speakdate ASC')
   end
 
   def show
